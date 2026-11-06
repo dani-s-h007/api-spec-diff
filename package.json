@@ -1,0 +1,46 @@
+{
+  "name": "api-spec-diff",
+  "version": "1.0.0",
+  "description": "OpenAPI & Swagger breaking change detector and backward compatibility auditor.",
+  "type": "module",
+  "main": "src/comparator.js",
+  "types": "index.d.ts",
+  "bin": {
+    "api-spec-diff": "bin/cli.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "demo",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "demo": "node demo/run-demo.js",
+    "start": "node bin/cli.js"
+  },
+  "keywords": [
+    "openapi",
+    "swagger",
+    "breaking-changes",
+    "api-governance",
+    "contract-testing",
+    "ci",
+    "cli"
+  ],
+  "author": "dani-s-h007 <shanusathar@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dani-s-h007/api-spec-diff.git"
+  },
+  "homepage": "https://github.com/dani-s-h007/api-spec-diff#readme",
+  "bugs": {
+    "url": "https://github.com/dani-s-h007/api-spec-diff/issues"
+  }
+}
