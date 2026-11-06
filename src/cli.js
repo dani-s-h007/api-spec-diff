@@ -64,24 +64,24 @@ export async function runCli(argv = process.argv.slice(2)) {
     return 0;
   }
 
-  console.log('\n📡 api-spec-diff - OpenAPI Breaking Change Linter');
+  console.log('\napi-spec-diff - OpenAPI Breaking Change Linter');
   console.log('============================================================');
   console.log(`Base Spec:     ${oldFile}`);
   console.log(`Updated Spec:  ${newFile}`);
   console.log(`Breaking:      ${diff.hasBreaking ? '\x1b[31mYES (Breaking Changes Detected)\x1b[0m' : '\x1b[32mNO (Backward Compatible)\x1b[0m'}\n`);
 
   if (diff.breakingChanges.length > 0) {
-    console.log(`🚨 BREAKING CHANGES (${diff.breakingChanges.length}):`);
+    console.log(`[ALERT] BREAKING CHANGES (${diff.breakingChanges.length}):`);
     for (const b of diff.breakingChanges) {
-      console.log(`   ✖ ${b.message}`);
+      console.log(`   [FAIL] ${b.message}`);
     }
     console.log('');
   }
 
   if (diff.nonBreakingChanges.length > 0) {
-    console.log(`✨ Non-Breaking Additions (${diff.nonBreakingChanges.length}):`);
+    console.log(`[NON-BREAKING] Additions (${diff.nonBreakingChanges.length}):`);
     for (const nb of diff.nonBreakingChanges) {
-      console.log(`   ✔ ${nb.message}`);
+      console.log(`   [OK] ${nb.message}`);
     }
     console.log('');
   }

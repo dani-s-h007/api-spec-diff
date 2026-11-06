@@ -1,4 +1,4 @@
-# api-spec-diff 📡
+# api-spec-diff
 
 [![CI](https://github.com/dani-s-h007/api-spec-diff/actions/workflows/ci.yml/badge.svg)](https://github.com/dani-s-h007/api-spec-diff/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -11,7 +11,7 @@ Modifying REST APIs without strict breaking change detection frequently causes s
 
 ---
 
-## ✨ Features
+## Features
 
 - **Breaking Change Detection**: Identifies removed paths, removed HTTP methods, and newly added required parameters.
 - **Non-Breaking Evolution**: Categorizes backward-compatible additions (new endpoints, optional parameters).
@@ -20,7 +20,7 @@ Modifying REST APIs without strict breaking change detection frequently causes s
 
 ---
 
-## 🚀 Installation & Demo
+## Installation & Demo
 
 ```bash
 # Run on-demand with npx
@@ -32,7 +32,7 @@ npm run demo
 
 ---
 
-## 🛠️ CLI Usage
+## CLI Usage
 
 ```bash
 # Compare old vs new specification:
@@ -47,7 +47,7 @@ api-spec-diff openapi-v1.json openapi-v2.json --json
 
 ---
 
-## 💻 Programmatic TypeScript API
+## Programmatic TypeScript API
 
 ```typescript
 import { compareOpenApiSpecs } from 'api-spec-diff';
@@ -61,7 +61,7 @@ if (diff.hasBreaking) {
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ```bash
 npm test
@@ -69,7 +69,7 @@ npm test
 
 ---
 
-## 📄 License
+## License
 
 MIT © Essentials Toolkit Authors
 

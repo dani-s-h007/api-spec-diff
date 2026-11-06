@@ -5,7 +5,7 @@
 
 import { compareOpenApiSpecs } from '../src/comparator.js';
 
-console.log('\n🚀 Starting api-spec-diff Interactive Demo...\n');
+console.log('\n=== [DEMO] Starting api-spec-diff ===\n');
 
 const v1Spec = {
   openapi: '3.0.0',
@@ -43,11 +43,11 @@ const diff = compareOpenApiSpecs(v1Spec, v2Spec);
 
 console.log(`Has Breaking Changes: ${diff.hasBreaking ? 'YES (Would break existing clients)' : 'NO'}\n`);
 
-console.log('🚨 Breaking Changes:');
+console.log('[BREAKING] Changes:');
 diff.breakingChanges.forEach((b) => console.log(` - ${b.message}`));
 
-console.log('\n✨ Non-Breaking Changes:');
+console.log('\n[NON-BREAKING] Changes:');
 diff.nonBreakingChanges.forEach((nb) => console.log(` - ${nb.message}`));
 
-console.log('\n🎉 Demo completed successfully!\n');
+console.log('\n[SUCCESS] Demo completed successfully.\n');
 
